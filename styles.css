@@ -150,3 +150,35 @@ a {
     margin-top: 18px;
     color: #fdf0d5;
 }
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ed1b2e;
+    text-align: center;
+    padding: 8px;
+}
+.promo-banner {
+    color: #fdf0d5;
+    font-size: large;
+    font-weight: 400;
+} 
+.banner span {
+    padding: 4px;
+}
+  @keyframes bounce {
+    0%   { transform: translateY(0) }
+    50%  { transform: translateY(-10px) }
+    100% { transform: translateY(0) }
+}
+.emoji {
+  animation: bounce 1s infinite;
+}
+.close-banner {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #5143e1;
+    font-size: larger;
+    padding-left: 8px;
+}

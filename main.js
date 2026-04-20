@@ -29,3 +29,9 @@ hamburger.addEventListener ("click", function() {
     }
         }, 100);
     })
+    const banner = document.querySelector (".banner")
+    const closeBanner = document.querySelector (".close-banner")
+
+    closeBanner.addEventListener ("click", function() {
+    banner.style.display = "none"
+})
