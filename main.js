@@ -35,3 +35,15 @@ hamburger.addEventListener ("click", function() {
     closeBanner.addEventListener ("click", function() {
     banner.style.display = "none"
 })
+    const addToCart = document.querySelectorAll(".add-to-cart");
+    addToCart.forEach((button) => {
+    button.addEventListener ("click", function() {
+    const notification = document.createElement("div")
+    notification.classList.add("notification")
+    notification.textContent = "Added to cart! 🍜"
+    document.body.appendChild(notification)
+    setTimeout(() => {
+        notification.remove()
+    }, 2000)
+     })   
+    });

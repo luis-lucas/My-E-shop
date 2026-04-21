@@ -92,30 +92,6 @@ a {
     font-weight: 900;
  }
 
-@media (min-width: 768px) {
-    .menu-toggle {
-        display: none;
-    }
-    .links-nav {
-        display: flex;
-        width: 30%;
-        max-height: none;
-        overflow: visible;
-    }
-    .nav-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-direction: row;
-        width: 100%;
-    }
-    .nav-link {
-        padding-right: 30px;
-    }
-    .hero-button {
-        font-size: medium;
-    }
-}
 .hero {
     display: flex;
     flex-direction: column;
@@ -123,6 +99,7 @@ a {
     justify-content: center;
     background-color: #a7c7e7;
     min-height: 100vh;
+    box-shadow: 1px 10px 5px 0px rgba(0,0,0,0.75);
 }
 .hero-title {
     color: #e74c3c;
@@ -141,6 +118,7 @@ a {
     font-family: 'Merienda', cursive;
     font-size: 20px;
     font-weight: 600; 
+    padding: 8px;
 }
 .hero-button {
     background-color: #5143e1;
@@ -181,4 +159,94 @@ a {
     color: #5143e1;
     font-size: larger;
     padding-left: 8px;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #80bcbe;
+    box-shadow: 1px 10px 5px 0px rgba(0,0,0,0.75);
+    border-radius: 16px;
+    overflow: hidden;
+    padding: 8px;
+}
+.card img {
+    width: 100%;
+    
+}
+.product {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 4px;
+    gap: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.add-to-cart {
+    background-color: #68737a;
+    border: solid 1px;
+    border-radius: 16px;
+    color: #fdf0d5;
+    font-size: medium;
+    padding: 8px;
+    margin-top: 4px;
+    transition: 0.3s ease-in-out;
+}
+.add-to-cart:hover {
+    cursor: pointer;
+    background-color: #849198;
+}
+.add-to-cart:active {
+    transform: scale(0.95);
+}
+.card h4, .card p {
+    color: #e74c3c;
+    font-family: 'Merienda', cursive;
+    font-size: medium;
+    padding: 2px;
+}
+.notification{
+    position: fixed;
+    background-color: #d9e1e2;
+    color:#2e4052;
+    padding: 16px;
+    border-radius: 12px;
+    bottom: 20px;
+    right: 20px;
+    font-family: 'Merienda', cursive;
+    font-size: large;
+    border: solid 1px #2e4052;
+}
+@media (min-width: 768px) {
+    .menu-toggle {
+        display: none;
+    }
+    .links-nav {
+        display: flex;
+        width: 30%;
+        max-height: none;
+        overflow: visible;
+    }
+    .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        width: 100%;
+    }
+    .nav-link {
+        padding-right: 30px;
+    }
+    .hero-button {
+        font-size: medium;
+    }
+    .product {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 16px;
+    gap: 8px;
+}
+.card {
+    padding: 16px;
+}
 }
