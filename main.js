@@ -47,3 +47,11 @@ hamburger.addEventListener ("click", function() {
     }, 2000)
      })   
     });
+
+    const listDown = document.querySelector (".product");
+    const heroButton = document.querySelector (".hero-button");
+
+    heroButton.addEventListener ("click", function() {
+        listDown.scrollIntoView({behavior: "smooth"})
+        listDown.classList.add("visible")
+    })
