@@ -55,3 +55,43 @@ hamburger.addEventListener ("click", function() {
         listDown.scrollIntoView({behavior: "smooth"})
         listDown.classList.add("visible")
     })
+
+    const reviews = [
+        {name: "Oliver", review: "Hands down the richest broth in the city. The noodles have that perfect 'snap'—pure comfort in a bowl!", stars: "⭐⭐⭐⭐⭐", image: "E-shop-img/001.png"},
+
+        {name: "Robert", review: "Authentic, fresh, and full of flavor. The Pad Thai is perfectly balanced—not too sweet, with just the right amount of lime and crunch.", stars: "⭐⭐⭐⭐⭐", image: "E-shop-img/002.png"},
+
+        {name: "Thomas", review: "My new favorite noodle spot! Super fast service and the quality of the ingredients really stands out. I'm officially a regular now.", stars: "⭐⭐⭐⭐⭐", image: "E-shop-img/003.png"}
+    ]
+
+    let currentReview = 0
+
+    const titleReview = document.querySelector(".review")
+    const textTestimonial = document.querySelector(".review-text")
+    const ratingStars = document.querySelector(".star")
+    const reviewImage = document.querySelector(".review-img")
+    const prevButton = document.querySelector(".prev-button")
+    const nextButton = document.querySelector(".next-button")
+
+    const showReview = () => {
+        titleReview.textContent = reviews[currentReview].name
+        textTestimonial.textContent = reviews[currentReview].review
+        ratingStars.textContent = reviews[currentReview].stars
+        reviewImage.src = reviews[currentReview].image
+    }
+    showReview()
+    
+    nextButton.addEventListener("click", function() {
+        currentReview++
+        if(currentReview === reviews.length) {
+            currentReview = 0
+        }
+        showReview()
+    })
+    prevButton.addEventListener("click", function(){
+        currentReview--
+    if(currentReview < 0) {
+       currentReview = reviews.length - 1
+    }
+        showReview()
+    })
