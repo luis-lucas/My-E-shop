@@ -95,3 +95,15 @@ hamburger.addEventListener ("click", function() {
     }
         showReview()
     })
+
+    const backToTop = document.querySelector(".back-to-top")
+    window.addEventListener("scroll", function() {
+       if(window.scrollY > 900){
+           backToTop.style.display = "block"
+       } else {
+        backToTop.style.display = "none"
+       }
+    })
+    backToTop.addEventListener("click", function(){
+     window.scrollTo({top: 0, behavior: 'smooth'});
+    })
