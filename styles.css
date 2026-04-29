@@ -317,6 +317,30 @@ footer {
     right: 180px;
     opacity: 0.8;
 }
+
+.news-letter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px;
+    background-color: #d8e2dc;
+    font-family: 'Merienda', cursive;
+}
+.user {
+    margin-top: 8px;
+    border: 2px solid #ff758f;
+    border-radius: 8px;
+    padding: 8px;
+    opacity: 0.5;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.submit {
+    margin: 8px 0 8px 0;
+    border: solid #ff758f 1px;
+    border-radius: 8px;
+    padding: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+}
 @media (min-width: 768px) {
     .menu-toggle {
         display: none;

@@ -107,3 +107,21 @@ hamburger.addEventListener ("click", function() {
     backToTop.addEventListener("click", function(){
      window.scrollTo({top: 0, behavior: 'smooth'});
     })
+
+    const user = document.querySelector(".user")
+    const submit = document.querySelector(".submit")
+    submit.addEventListener("click", function(){
+        const existing = document.querySelector(".news-letter p")
+      if(existing) existing.remove()
+      if(user.value.includes("@")){
+       const message = document.createElement("p")
+       message.textContent = "You're on the list! 🍜 Look out for tasty updates and exclusive deals in your inbox soon."
+       message.style.color = "green"
+       document.querySelector(".news-letter").appendChild(message)
+      }else{
+        const message = document.createElement("p")
+        message.textContent = "Spilled some broth! 🥢 That email doesn't look right. Please double-check and try again."
+        message.style.color = "red"
+        document.querySelector(".news-letter").appendChild(message)
+      }
+    })
