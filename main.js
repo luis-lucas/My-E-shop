@@ -41,6 +41,8 @@ hamburger.addEventListener ("click", function() {
     const notification = document.createElement("div")
     notification.classList.add("notification")
     notification.textContent = "Added to cart! 🍜"
+    items++
+    cartCount.textContent = items
     document.body.appendChild(notification)
     setTimeout(() => {
         notification.remove()
@@ -125,3 +127,6 @@ hamburger.addEventListener ("click", function() {
         document.querySelector(".news-letter").appendChild(message)
       }
     })
+
+    const cartCount = document.querySelector(".cart-count")
+    let items = 0
