@@ -229,7 +229,8 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 16px 8px 0 8px;
+   
+    overflow: hidden;
 }
 .add-to-cart:active {
     transform: scale(0.95);
@@ -325,7 +326,7 @@ footer {
     border-radius: 12px;
     display: none;
     bottom: 0px;
-    right: 180px;
+    right: 20px;
     opacity: 0.8;
 }
 
