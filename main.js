@@ -5,6 +5,7 @@ hamburger.addEventListener ("click", function() {
     navLinks.classList.toggle ("active")
     hamburger.classList.toggle("active")
 })
+if (document.querySelector(".hero-title")){
  const text= "Welcome to The Noodle Shop — long noodles, short waits. Slurp loud, laugh hard, then nap. No judgment. Just broth."
  const heroTitle = document.querySelector (".hero-title")
  let titleCounter = 0
@@ -29,27 +30,19 @@ hamburger.addEventListener ("click", function() {
     }
         }, 100);
     })
+}
+
+
     const banner = document.querySelector (".banner")
     const closeBanner = document.querySelector (".close-banner")
 
     closeBanner.addEventListener ("click", function() {
     banner.style.display = "none"
 })
-    const addToCart = document.querySelectorAll(".add-to-cart");
-    addToCart.forEach((button) => {
-    button.addEventListener ("click", function() {
-    const notification = document.createElement("div")
-    notification.classList.add("notification")
-    notification.textContent = "Added to cart! 🍜"
-    items++
-    cartCount.textContent = items
-    document.body.appendChild(notification)
-    setTimeout(() => {
-        notification.remove()
-    }, 2000)
-     })   
-    });
+    
 
+
+    if (document.querySelector(".hero-button")) {
     const listDown = document.querySelector (".product");
     const heroButton = document.querySelector (".hero-button");
 
@@ -57,7 +50,9 @@ hamburger.addEventListener ("click", function() {
         listDown.scrollIntoView({behavior: "smooth"})
         listDown.classList.add("visible")
     })
+    }
 
+    if(document.querySelector(".review")) {
     const reviews = [
         {name: "Oliver", review: "Hands down the richest broth in the city. The noodles have that perfect 'snap'—pure comfort in a bowl!", stars: "⭐⭐⭐⭐⭐", image: "E-shop-img/001.png"},
 
@@ -97,6 +92,8 @@ hamburger.addEventListener ("click", function() {
     }
         showReview()
     })
+    }
+
 
     const backToTop = document.querySelector(".back-to-top")
     window.addEventListener("scroll", function() {
@@ -110,6 +107,9 @@ hamburger.addEventListener ("click", function() {
      window.scrollTo({top: 0, behavior: 'smooth'});
     })
 
+
+    if(document.querySelector(".news-letter")) {  
+    
     const user = document.querySelector(".user")
     const submit = document.querySelector(".submit")
     submit.addEventListener("click", function(){
@@ -127,6 +127,23 @@ hamburger.addEventListener ("click", function() {
         document.querySelector(".news-letter").appendChild(message)
       }
     })
+    }
 
+    if(document.querySelector(".add-to-cart")) {
     const cartCount = document.querySelector(".cart-count")
     let items = 0
+    const addToCart = document.querySelectorAll(".add-to-cart");
+    addToCart.forEach((button) => {
+    button.addEventListener ("click", function() {
+    const notification = document.createElement("div")
+    notification.classList.add("notification")
+    notification.textContent = "Added to cart! 🍜"
+    items++
+    cartCount.textContent = items
+    document.body.appendChild(notification)
+    setTimeout(() => {
+        notification.remove()
+    }, 2000)
+     })   
+    });
+    }
